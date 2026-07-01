@@ -25,9 +25,10 @@
         <p>Attributes are in the start of the tag and they provide additional information. Formula goes name="value"</p>
         <p>The style="attribute:value;" is also used to style html inside the html file.</p>
 
-        <h3>HTML Headings</h3>
+        <h3 id="html-headings">HTML Headings</h3>
         <p>The headings go on from h1 to h6. They are important because they index the structure and content of the web pages.</p>
         <p>A good example: h1=Page title, h2=Section titles, h3=sub-sections.</p>
+        <p>As you look at the source code, you will notice that the h4 has an id attribute. You can ignore this for now, but basically I included this attribute so it can referenced as a bookmark link from the <a href="#html-links">link section</a>. Click the link section so you can get an idea of what I am talking about.</p>
 
         <h3>HTML Paragraphs</h3>
         <p>This is another paragraph which is a block of text.</p>
@@ -38,6 +39,47 @@
 
         <h3>HTML Styles</h3>
         <p>As mentioned earlier, style attribute can be used to add some styles inside the element's tag to style that element. But CSS can be written in a different file to style the elements. More on this later.</p>
+
+        <h3>HTML Formatting</h3>
+        <p>There are different tags that can be used to display text in special way.</p>
+        <p><b>For example:</b> One day, Ethan will be a very <strong>successful developer</strong> in a <i>few months</i>. <em>All he has to do code every day.</em></p>
+
+        <h3>HTML Quotation and Citation Elements</h3>
+        <p>This is an example of a blockquote:</p>
+        <blockquote cite="">This blockquote does not have any citation in it because it is a made up example. Usually you would want some kind of citation in the opening tag.</blockquote>
+        <p>Please say a quote to me: <q>Thank you sir for making this tutorial. I would love to save this repository.</q></p>
+        <p>Feel free to say this to me at:</p>
+        <address>
+            <abbr title="None Existing Place">NEP</abbr><br>
+            Email us at: pleasedontemailus@doesnotexist.com<br>
+            123 None Existing Place<br>
+            Fantasy, NE 12345<br>
+        </address>
+
+        <h3>HTML Comments</h3>
+        <!-- This is a comment-->
+        <p>There is a comment above this p tag, it shows in the source code, but not in the browser. Comments are just for organization and readability of the code.</p>
+
+        <h3>HTML CSS</h3>
+        <p style="color:blue;">Quick styles can be applied using inline css; however, external file will be used for bigger projects for better readability and separation of concerns. More CSS styles later upon learning CSS section.</p>
+        <p style="border: 1px solid black;
+        padding: 20px;
+        margin: 30px;">You can define a border in almost all of the HTML elements. This element has a 1px solid border around it. Also, it has padding of 20px all sides of the text so the text is not fully flushed with the border. A margin of 10px is added as well to give this p tag space from other elements surrounding it.</p>
+
+        <h3 id="html-links">HTML Links</h3>
+        <p>I just want to repeat on where I am currently learning, which is at <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">w3Schools</a>. The target="_blank" attribute will make it that when the link is clicked, it will open the document in a new tab or window.</p>
+        <p>Absolute URLs has a full web address to access like the one above. Relative URL is when it linking a page within the same website.</p>
+        <p>A book mark link exists as well. It helps so you don't have to look for a specific content while I reference something. For instance, if I were to talk about headings again, I imagine you would like to go back to the <a href="#html-headings">headings section</a>.</p>
+
+        <h3>HTML Images</h3>
+        <p>Here is a photo of sir Tubs and I:</p>
+        <img src="./images/sirTubs.jpeg" alt="picture of my cat and I" width="300" height="300" usemap="#tub-and-i"/>
+        <map name="tub-and-i">
+            <area shape="rect" coords="85, 90, 150, 155" alt="sir Tubs' face" href="https://en.wikipedia.org/wiki/Lion" target="_blank">
+            <area shape="rect" coords="190, 90, 255, 175" alt="My head" href="https://www.merriam-webster.com/dictionary/puny" target="_blank">
+        </map>        
+        <p>As you can see in the source code, image maps have been applied to the image as well. Hover over sir Tubs' face to see what I think about him. On the other hand, hover over my head to show you what sir Tubs <i>probably</i> thinks about me. Kind of had to experiment with the coordinates here because they a pixel based.</p>
+        <p>The picture element tag can be used for bandwidth and format support. It nests elements such as source and image tags. The source tags is open with a srcset attribute which the source file, while the img element is just your img.</p>
 
 
         <hr>
