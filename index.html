@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Frontend Journey</title>
+        <link rel="icon" type="image/x-icon" href="https://fontawesome.com/social/code?f=classic&s=solid"/>
     </head>
     <body>
         <h1>MY FRONTEND DEVELOPMENT JOURNEY</h1>
@@ -80,6 +81,80 @@
         </map>        
         <p>As you can see in the source code, image maps have been applied to the image as well. Hover over sir Tubs' face to see what I think about him. On the other hand, hover over my head to show you what sir Tubs <i>probably</i> thinks about me. Kind of had to experiment with the coordinates here because they a pixel based.</p>
         <p>The picture element tag can be used for bandwidth and format support. It nests elements such as source and image tags. The source tags is open with a srcset attribute which the source file, while the img element is just your img.</p>
+
+        <h3>HTML Favicon</h3>
+        <p>The favicon is the image displayed at the left of the page title in the browser tab. It is a link tag located in the head section and the html basics section image is used as the favicon.</p>
+        <p>The "My Frontend Journey" title on the tab is in the head tag of this html document. This is the way to add title to the page. It is important that it is a good title for Search Engine Optimization.</p>
+
+        <h3>HTML Tables</h3>
+        <table style="border: 1px solid black;
+        width: 100%; height: 200px;">
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <td>Row 1a</td>
+                <td>Row 1b</td>
+            </tr>
+            <tr>
+                <td>Row 2a</td>
+                <td>Row 2b</td>
+            </tr>
+        </table>
+
+        <h3>HTML Lists</h3>
+        <p>Good for grouping related items.</p>
+        <ul>
+            <li>first item</li>
+            <li>second item</li>
+        </ul>
+        <p>Another Example could be a description list. Good for recipe guides.</p>
+        <dl>
+            <dt>Coffee</dt>
+            <dd>A hot black drink</dd>
+        </dl>
+
+        <h3>HTML Block and Inline Elements</h3>
+        <p>Block level elements starts a new line and its width stretches the whole width available of its parent container. This paragraph right now is a p tag that is block level element.</p>
+        <p>Inline elements on the other hand only takes up space that is necessary. The span element is a good example of this.</p>
+
+        <h3>HTML Div Element</h3>
+        <p>The div element is used as a container for other HTML.</p>
+
+        <h3>HTML Classes</h3>
+        <p>Class atttribute of html element is used to point at in the styling sheet css. Also, Javascript can also use it to access the specific class. An element can have multiple classes inside the class attribute and they are separated by spaces (ex: class="big red").</p>
+        <p>Different elements can share the same class.</p>
+
+        <h3>HTML Id</h3>
+        <p>HTML Ids are used to give an element a unique id. They can only be used for one element in the page (have to be unique). It is a pointer for CSS and Javascript as well.</p>
+        <p>They can be used as bookmarks as well. Like this: feel free to click on <a href="#html-headings">this</a> to go back to the headings section of this page.</p>
+
+        <h3>HTML Buttons</h3>
+        <p>The button element defines a clickable button in the page. They are usually inside forms.</p>
+        <button>Click this button please</button>
+        <p>There are multiple types of buttons such as button, submit, and reset.</p>
+
+        <h3>HTML Iframes</h3>
+        <p>iFrames are used to display a web page within a web page.</p>
+        <p>This is an iframe of the NSLS website article about Goal setting.</p>
+        <iframe src="demo_iframe.htm" name="iframe_a" title="NSLS Goal Setting Article" height="400" width="600" style="border: none;"></iframe>
+        <p>You can use iframe as target frame for a link in a web page. Click <a href="https://www.nsls.org/goal-setting-techniques" target="iframe_a">this</a> to view the NSLS Goal setting artcle in this web page - webpageception.</p>
+
+        <h3>HTML JavaScript</h3>
+        <p>JavaScript is important for web page to make it more dynamic and interactive. The script element tag will either have Javascript code, or it will point to the external sheet of Javascript code.</p>
+        <p>JavaScript is used commonly for image manipulation, form validation, and dynamic changes of content. If you look at the source code, there is an empty p element underneath this line. However, Javascript makes it have content and style.</p>
+        <p id="empty-p-tag"></p>
+
+        <script>
+            document.getElementById("empty-p-tag").innerHTML = "This is an empty p tag that used JavaScript style and display this text.";
+            document.getElementById("empty-p-tag").style.fontSize = "25px";
+            document.getElementById("empty-p-tag").style.color = "white";
+            document.getElementById("empty-p-tag").style.backgroundColor = "green";
+        </script>
+        <noscript>Sorry, your browser does not support JavaScript</noscript>
+
+        <p>The noscript element is used to display HTML if JavaScript is not supported by the browser.</p>
 
 
         <hr>
