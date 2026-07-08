@@ -2,13 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <!--This is the metadata mentioned at the head tag section of the document-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML"/>
+        <meta name="description" content="Learning HTML"/>
+        <meta name="author" content="Ethan De Rouis"/>
+        <meta http-equiv="refresh" content="30">
+        <!--This is the metadata mentioned at the head tag section of the document-->
         <title>My Frontend Journey</title>
         <link rel="icon" type="image/x-icon" href="https://fontawesome.com/social/code?f=classic&s=solid"/>
     </head>
-    <body>
-        <h1>MY FRONTEND DEVELOPMENT JOURNEY</h1>
 
+    <header>
+        <h1>MY FRONTEND DEVELOPMENT JOURNEY</h1>
+    </header>
+    <body>
         <h2>HTML Tutorial</h2>
 
         <h3>HTML Basics</h3>
@@ -156,6 +164,56 @@
 
         <p>The noscript element is used to display HTML if JavaScript is not supported by the browser.</p>
 
+        <h3>HTML File Paths</h3>
+
+        <p>The file path is the location of the file in the website's folder structure. File path can involve Stylesheets, Web pages, images, and JavaScript</p>
+        <p>URL are absolute file paths, while others are relative to the webpage. Relative file path should be used whenever possible for they are not bound to the current base URL.</p>
+
+        <h3>HTML Head</h3>
+
+        <p>The head tag contains metatdata (data about data) and is displayed before the body tag. It contains title, character set, styles, scripts, and other metadata.</p>
+
+        <h3>HTML Lyaout Elements and Techniques</h3>
+
+        <p>There are different layouts that will be learnt that will with website building. This include: Float, Flexbox, and Grid Layout.</p>
+
+        <h3>HTML Responsive Web Design</h3>
+
+        <p>A responsive web design is creating web pages that adjusts to different screen sizes.</p>
+        <p>Media queries can define completely different browser sizes.</p>
+
+        <h3>HTML Computer Code Elements</h3>
+        <p>This a JavaScript that is presented in a web page:</p>
+        <pre>
+            <code>
+                console.log("Hello World!")
+
+                console.log("This is JavaScript")
+
+                console.log("This tag is a code tag nexted inside pre tag which preserves the line breaks of the content.")
+            </code>
+        </pre>
+
+        <p><kbd>This is a kbd tag that displpays content in a monospace font.</kbd></p>
+        <p><samp>This is a samp tag that is used to define sample output from a computer program.</samp></p>
+        <p>Variables can be listed as well: area = <var>l</var> x <var>w</var></p>
+
+        <h3>HTML Semantics</h3>
+        <p>In HTML, there are serveral semantic element that can be used to display a webpage: article, aside, details, figcaption, figure, footer, header, main, mark, nav, section, summary, time.</p>
+        
+        <div class="section-example">
+            <section>
+                <p>This p tag is nested in the first section</p>
+            </section>
+
+            <section>
+                <p>This p tag is nested in the second section</p>
+            </section>
+        </div>
+
+        <p>The difference between article and section is that article shows an independent, self-contained content. On the other hand, section defines a section in a document.</p>
+
+        <p>There could be multiple headers inside a web page. Like for instance, they can be nested inside the article elements. There is a header on top of this page right now. It houses the h1 element of the page. </p>
 
         <hr>
 
@@ -176,4 +234,8 @@
 
 
     </body>
+
+    <footer>
+        <p>Author: Ethan De Rouis</p>
+    </footer>
 </html>
