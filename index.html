@@ -215,9 +215,117 @@
 
         <p>There could be multiple headers inside a web page. Like for instance, they can be nested inside the article elements. There is a header on top of this page right now. It houses the h1 element of the page. </p>
 
+        <h3>HTML Style Guide</h3>
+
+        <p>Always declare document type in html.</p>
+        <p>The elements should be in lowercase.</p>
+        <p>Whether it an ending tag or self closing, always close the elements.</p>
+        <p>Attributes should always be in lowercase.</p>
+        <p>Attribute values are always quoted.</p>
+        <p>Alt, Width, and Height for images needs to be specified. Makes it easier for the browser to load the image.</p>
+        <p>Space-less entities are easier to read because it helps group them together.</p>
+        <p>Avoid the long lines of code for it makes reading it harder. Adding some blank lines will help make your code legible.</p>
+        <p>There should be a title element in HTML for it is important for SEO, browser toolbar, for favorites in web page, and search engine results.</p>
+        <p>Always include html and body elements.</p>
+        <p>The / can be avoided in self-closing element but it is better to keep them because it is expected for XML/XHTML software.</p>
+        <p>Add a lang attribute in the html element to declare the language of the web page.</p>
+        <p>Try to define charset and lang metatdata as early as possible.</p>
+        <p>You should include the meta element with attributes: name="viewport" content="width=device-width, initial-scale=1.0"</p>
+        <p>Comments are written in one line or multiple lines. Take advantage of comments.</p>
+        <p>Link external styles sheets. If it is a short css, just make it one line as possible. If it is long, then it can take the space needed for its room.</p>
+        <p>JavaScript can be loaded using self closing script tag with src="myscript.js" attribute.</p>
+        <p>Having a cleaner and tidier code will help prevent JavaScript errors.</p>
+        <p>Use lower case for file names to prevent having to keep track of this at all times.</p>
+        
+        <h3>HTML Entities</h3>
+        <p>Reserved characters in HTML must be replace with entities. This is done b & symbol then entity name. For instance, look at the source code of this &lt; sign, you can see how it is typed in the html. If you actually put &lt sign on instead of how it is typed, it will break your html. There are other special entities such as non-breaking space, diacritical marks, symbol entities, mathematical entities, greek entities, and more.</p>
+
+        <h3>HTML Charset Attribute</h3>
+        <p>It is recommended to use charset="UTF-8" for it covers almost all of the characters and symbols in the world.</p>
+        <p>URL are used because they are easier to remember than numbers. They follow this outline: scheme://prefix.domain:port/path/filename</p>
+
+        <h3>HTML vs. XHTML</h3>
+        <p>XHTML is much more stricter for error handling processes.</p>
+
         <hr>
 
         <h2>HTML Forms</h2>
+
+        <h3>HTML Forms</h3>
+        <p>HTML forms are a way to collect user input. This is sent to a server for processing.</p>
+        <p>The form element is used to create an html form.</p>
+        <p>The input element is self closing and is to display the input and its type in the page.</p>
+        <p>The label element is useful for screen readers because it will read it out loud when the user is focus on an input element. The for attribute is equal to the id attribute of the input to bind the two together.</p>
+
+        <h3>HTML Form Attributes</h3>
+        <p>The action attribute defines the action that will be done when the form is submitted. For example: action="/action_page.php", upon submitting the form, the form data is sent to a file "/action_page.php" and it contains a server-side script that handles the data.</p>
+        <p>The target attribute specifies displays the response after form submission. For example: _self value will open in the current window open.</p>
+        <p>The method attribute specifies the HTTP method. "get" for seding to URL variables or HTTP post transaction for "post".</p>
+        <p>"get": NEVER USE GET TO SEND SENSITIVE DATA FOR IT IS VISIBLE IN THE URL. Only useful for NON-SECURE data.</p>
+        <p>"post": FORM DATA DOES NOT SHOW IN THE URL. ALWAYS USE POST IF THE DATA CONTAINS SENSITIVE OR PERSONAL INFORMATION.</p>
+        <p>The autocomplete attribute specifies if the form can be autocompleted or not.</p>
+        <p>The nonvalidate attribute specifies that the inputs on the form data should not be validated.</p>
+
+        <h3>HTML Form Elements</h3>
+        <p>The input element can be displayed in a lot of ways depending on the type attribute.</p>
+        <p>The label element is for screen readers and also use to tie input (through input id attribute) to a label (throught its for attribute).</p>
+        <p>The select element defines the dropdown list, which can be tied to the label as well. The size attribute will show specified number of options in the dropdown. The multiple attribute allows the user to click on multiple choices. The option elements nest insdie the select element to define options with value attributes. The selected attribute inside one of the options will make it as the default selected type in a form.</p>
+        <p>The textarea element defines a multiline input field. The rows and cols attributes will specify the number of lines and width of textarea.</p>
+        <p>The button element defines a clickable button.</p>
+        <p>A fieldset element groups related data, while the legend defines what that fielset is.</p>
+        <p>A datalist element with its nested option elements give pred-defined options for the input element.</p>
+        <p>The output element represents the result of a calculation.</p>
+
+        <h3>HTML Input Types</h3>
+        <p>The text input type is for single line text input field.</p>
+        <p>The password input type is for a password field.</p>
+
+        <h3>HTML Form Example</h3>
+
+        <form action="" target="_self" method="POST" autocomplete nonvalidate>
+
+            <!--text input-->
+            <label for="name">Full Name: </label>
+            <input type="text" id="name" name="name"/>
+
+            <!--password input-->
+            <label for="pwd">What is the secret password?</label>
+            <input type="password" id="pwd" name="pwd"/>
+
+            <!--fieldset and legend, select and options-->
+            <fieldset>
+                <legend>Yes or No Questions</legend>
+                <label for="w3schools-learning">Are you also learning from w3schools?</label>
+                <select id="w3schools-learning">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </fieldset>           
+
+            <!--button input-->
+            <button type="button">A Clickable Button</button>
+
+            <!--datalist-->
+            <label>What is you're favorite animal?</label>
+            <input list="animals" name="animals">
+            <datalist id="animals">
+                <option value="cat"></option>
+                <option value="dog"></option>
+            </datalist>
+
+            <!--radio input-->
+            <label for="cat">Cat</label>
+            <input type="radio" value="cat" id="cat" name="superior-pet"/>
+
+            <label for="dog">Dog</label>
+            <input type="radio" value="dog" id="dog" name="superior-pet"/>
+
+            <!--submit input and reset input-->
+            <input type="submit" value="Seriously Submitted"/>
+            <input type="reset" value="Made a mistake, reset the page"/>
+        </form>
+
+
         <hr>
 
 
