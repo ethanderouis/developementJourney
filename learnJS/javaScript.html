@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn JavaScript</title>
+    
+    <!--Linking JavaScript file-->
+    <script src="javaScript.js" defer></script>
+</head>
+<body>
+
+    <h2>Things that JavaScript can do:</h2>
+    <!--change content using getElement method-->
+    <p id="demo">Tubber is a monster.</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Tubber is a good boy"'>Lies, click me and I'll show you the truth.</button>
+    <br><br>
+
+    <!--Change attributes-->
+    <img id="tobi-and-i" src="/images/sirTubs.jpeg" style="width:100px; height:100px;" alt="Tubber and I image"/>
+    <button type="button" onclick="document.getElementById('tobi-and-i').src = '/images/profile2.png'">Just me</button>
+    <button type="button" onclick="document.getElementById('tobi-and-i').src = '/images/sirTubs.jpeg'">Me and Tubs</button>
+    <br><br>
+
+    <!--Can show and hide elements-->
+    <p>Click buttons to show/hide spooky message</p>
+    <button type="button" onclick="document.getElementById('spooky-message').style.display = 'block'">Show Ghost Message</button>
+    <button type="button" onclick="document.getElementById('spooky-message').style.display = 'none'">Hide Ghost Message</button>
+    <p id="spooky-message" style="display: none;">BOOOOOOOOO!!!!</p>
+    
+</body>
+</html>
