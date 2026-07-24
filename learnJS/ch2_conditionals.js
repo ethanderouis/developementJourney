@@ -93,3 +93,52 @@ if (runnerAge > 18 && isEarly) {
 } else {
   console.log(`Runner ${raceNumber}, we did not plan for you, so you will run at 12:30pm. Sorry for the incovenience.`)
 }
+
+
+// SLEEP DEBT CALCUTOR
+
+const getSleepHours = (day) => {
+  switch (day) {
+    case 'monday':
+      return 8;
+    case 'tuesday':
+      return 8;
+    case 'wednesday':
+      return 8;
+    case 'thursday':
+      return 8;
+    case 'friday':
+      return 8;
+    case 'saturday':
+      return 10;
+    case 'sunday':
+      return 9;
+  }
+}
+// console.log(getSleepHours('sunday'))
+
+const getActualSleepHours = () => {
+  return getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wednesday') + getSleepHours('thursday') + getSleepHours('friday') + getSleepHours('saturday') + getSleepHours('sunday');
+}
+//console.log(getActualSleepHours())
+
+const getIdealSleepHours = () => {
+  let idealHours = 8;
+  return idealHours *= 7;
+}
+//console.log(getIdealSleepHours());
+
+const calculateSleepDebt = () => {
+  let actualSleepHours = getActualSleepHours();
+  console.log(`Actual Sleep Hours is ${actualSleepHours} hours.`);
+  let idealSleepHours = getIdealSleepHours();
+  console.log(`Ideal Sleep Hours is ${idealSleepHours} hours.`);
+
+  if (actualSleepHours === idealSleepHours) {
+    console.log('Perfect amount of great sleep.');
+  } else if (actualSleepHours > idealSleepHours) {
+    console.log('You got more sleep than actually needed.');
+  } else {
+    console.log('You should get more rest.');
+  }
+}
